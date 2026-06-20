@@ -19,7 +19,7 @@ eureka:
     hostname: eurekaserver1
   client:
     serviceUrl:
-      defaultZone: http://eurekaserver2:8071/eureka/,http://eurekaserver3:8072/eureka/
+      defaultZone: http://eurekaserver2:8072/eureka/,http://eurekaserver3:8073/eureka/
 
 ---
 spring:
@@ -27,13 +27,13 @@ spring:
     activate:
       on-profile: peer2
 server:
-  port: 8071
+  port: 8072
 eureka:
   instance:
     hostname: eurekaserver2
   client:
     serviceUrl:
-      defaultZone: http://eurekaserver1:8070/eureka/,http://eurekaserver3:8072/eureka/
+      defaultZone: http://eurekaserver1:8070/eureka/,http://eurekaserver3:8073/eureka/
 
 ---
 spring:
@@ -41,10 +41,10 @@ spring:
     activate:
       on-profile: peer3
 server:
-  port: 8072
+  port: 8073
 eureka:
   instance:
     hostname: eurekaserver3
   client:
     serviceUrl:
-      defaultZone: http://eurekaserver1:8070/eureka/,http://eurekaserver2:8071/eureka/
+      defaultZone: http://eurekaserver1:8070/eureka/,http://eurekaserver2:8072/eureka/
