@@ -9,9 +9,7 @@ management:
 
 ---
 spring:
-  config:
-    activate:
-      on-profile: peer1
+  profiles: peer1
 server:
   port: 8070
 eureka:
@@ -23,9 +21,7 @@ eureka:
 
 ---
 spring:
-  config:
-    activate:
-      on-profile: peer2
+  profiles: peer2
 server:
   port: 8072
 eureka:
@@ -37,9 +33,7 @@ eureka:
 
 ---
 spring:
-  config:
-    activate:
-      on-profile: peer3
+  profiles: peer3
 server:
   port: 8073
 eureka:
